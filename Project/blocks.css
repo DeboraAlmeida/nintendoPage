@@ -1,0 +1,371 @@
+/*--------------------------*\
+           <PLANO>
+\*--------------------------*/
+.plano {
+  position: relative;
+
+  padding: 10px;
+  border: 1px solid #f00;
+  border-radius: 10px;
+
+  font-size: 1.4rem; /*herdado do html. O bloco vai gerenciar o font-size dos elementos*/
+}
+
+.plano--super-oferta::after {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border: thin solid #fff;
+
+  padding: 0 10px;
+
+  background-color: #DAA520;
+  color: #c20303;
+  text-shadow: .5px .5px #000;
+
+  font-size: 0.7142em;
+  line-height: 2.5;
+
+  content: "SUPER OFERTA!"
+
+}
+
+.plano__titulo {
+  margin: -10px;
+  margin-bottom: 0;
+  border: thin #aaa;
+  border-bottom: 0.5px solid #DAA520;
+  border-radius: 10px 10px 0 0;
+
+  background-color: #aaa;
+  color: #f00;
+  text-shadow: 1px 1px #fff;
+
+  text-align:center;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 2.5;
+}
+
+.plano__preco {
+  margin: 20px 0;
+
+  text-align: center;
+  font-size: 2em;
+}
+
+.plano__caracteristicas {
+  margin: 20px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.plano__caracteristicas li {
+  opacity: .9;
+
+  text-align: center;
+}
+
+.plano__rodape {
+  text-align: center;
+}
+/*-------------</PLANO>------------------*/
+
+/*--------------------------*\
+           <BOTAO>
+\*--------------------------*/
+.botao {
+  display: inline-block;
+  padding: 0.85em 1.15em; /*deixei o padding relativo ao font-size tb*/
+  border: thin #ccc;
+  border-radius: 5px;
+
+  background-color: #a5f788;
+  box-shadow: 2px 2px #bbb;
+  color: green;
+
+  text-decoration: none;
+  line-height: normal;
+}
+
+.botao:hover, .botao:focus {
+  background-color: powderblue;
+  color: steelblue;
+
+  text-decoration: none;
+}
+
+.botao--assinar {
+  color: white;
+  background-color: #127D00;
+  border-color: #127D00;
+}
+
+.botao--assinar:hover, .botao-assinar:focus {
+  background-color: #0e6500;
+  color: #a5f788;
+}
+
+.botao--principal {
+  background-color: #0a3;
+  color: #002;
+  box-shadow: 2px 2px #000;
+}
+
+.botao--principal:hover, .botao--principal:focus {
+  background-color: #092;
+  color: #004;
+
+}
+/*-------------</BOTAO>------------------*/
+
+/*--------------------------*\
+           <CHAMADA>
+\*--------------------------*/
+.chamada {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.chamada__titulo {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 3.375em;
+  line-height: 1.0;
+  text-shadow: 2px 2px 3px #000;
+}
+
+.chamada__subtitulo {
+  margin: 60px 0;
+
+  color: #fff; /*#DAA520;*/
+}
+
+@media(min-width: 992px) {
+  .chamada {
+    padding-left: 10%;
+    padding-right: 10%;
+
+    font-size: 2.2rem;
+  }
+}
+/*-------------</CHAMADA>------------------*/
+
+/*--------------------------*\
+           <EXEMPLO>
+\*--------------------------*/
+.exemplo {
+  font-size: 2.2rem;
+
+}
+
+@media(min-width: 992px) {
+  .exemplo {
+    padding-left: 15%;
+    padding-right: 15%;
+
+    font-size: 2.8rem;
+  }
+}
+
+.exemplo__citacao {
+  position: relative;
+
+  margin: 0;
+  padding: 0 60px;
+
+  text-align: center;
+}
+
+.exemplo__destaque {
+  margin-top: 0;
+}
+
+.exemplo__destaque--unicode {
+  /*coloca aqui tudo junto e com as aspas*/
+}
+
+.exemplo__destaque--unicode::before { /*esse mod ainda tem q ser trabalhado pra responsivo*/
+  position: absolute;
+  left: 1em;
+  top: -0.47em;
+
+  color: #666;
+  font-size: 7em;
+
+  content: "\201C";
+}
+
+@media(min-width:576px){
+  .exemplo__citacao--destaque::before {
+    position: absolute;
+    left: 1em;
+  }
+}
+
+@media(min-width:1200px){
+  .exemplo__citacao--destaque::before {
+    position: absolute;
+    left: 1.15em;
+  }
+}
+
+.exemplo__game {
+  margin-top: 40px;
+
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.exemplo__game > img {
+  border-radius: 50%;
+}
+
+.exemplo__game > p {
+  margin-top: 7px;
+}
+
+/*-------------</EXEMPLO>------------------*/
+
+/*--------------------------*\
+           <NAVEGACAO>
+\*--------------------------*/
+
+.navegacao__menu {
+  float:right;
+}
+
+.navegacao__botao-chaveador {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  margin-top: 12px;
+
+  background: none;
+  background-image: url("Imagens/menu_bar.png");
+
+  outline: none; /*pra tirar o azul em volta qdo dou foco nele*/
+}
+
+@media(min-width: 992px) {
+  .navegacao__botao-chaveador {
+    display: none;
+  }
+}
+
+.navegacao__lista-menu {
+  margin: 0;
+
+  font-size: 1.4rem;
+
+  list-style: none;
+}
+
+@media(max-width: 991px) {
+  .navegacao__lista-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    display: none;
+    margin: 0;
+    padding: 20px;
+    width: 200px;
+    border-right: 1px solid #eee;
+
+    background-color: #fbfbfb;
+
+    font-size: 1.4rem;
+
+    list-style: none;
+  }
+
+  .navegacao__lista-menu--exibindo {
+    display: block;
+  }
+
+  .navegacao__item {
+    display: block;
+
+    line-height: 3;
+  }
+
+  .navegacao__item--botao {
+    margin-top: 20px;
+  }
+}
+
+@media(min-width:992px){
+  .navegacao__item {
+    display: inline-block;
+    padding-right: 20px;
+  }
+
+  .navegacao__item:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.navegacao__item > a:not(.botao) {
+  color: #555;
+}
+
+.navegacao__item > a:hover:not(.botao), .navegacao__item > a:focus:not(.botao) {
+  color: #610202;
+  text-decoration: none;
+}
+
+/*-------------</NAVEGACAO>------------------*/
+
+/*-------------------------------*\
+           <FORMULARIO>
+\*-------------------------------*/
+
+.formulario__titulo {
+  margin: 0;
+  margin-bottom: 40px;
+
+  border-bottom: 1px solid #ccc;
+
+  font-size: 2.6rem;
+  font-weight: normal;
+  color: #666; /*#004b86;*/
+}
+
+/*-------------</FORMULARIO>------------------*/
+
+/*---------------------------------*\
+           <GRUPO-ENTRADA>
+\*---------------------------------*/
+.grupo-entrada {
+  margin-bottom: 15px;
+}
+
+.grupo-entrada > label {
+  display: block;
+
+  font-weight: bold;
+}
+/*-------------</GRUPO-ENTRADA>------------------*/
+
+/*---------------------------*\
+           <CAMPO>
+\*---------------------------*/
+.campo {
+  display: block;
+  width: 100%;
+  height: 2.8em;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  background-color: #fff;
+
+  font-size:1.4rem;
+}
+
+/*-------------</CAMPO>------------------*/

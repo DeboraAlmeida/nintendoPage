@@ -1,0 +1,74 @@
+.layout-cabecalho {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #ccc;
+
+  background-color: #fff;
+}
+
+.layout-cabecalho--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.layout-planos {
+  padding: 80px 0;
+}
+
+@media(max-width: 749px){
+  .layout-planos .row > div:not(.ultima-coluna) {
+    margin-bottom: 40px;
+  }
+}
+
+.layout-planos::after{
+  clear: both;
+}
+
+.layout-chamada {
+  padding: 80px 0;
+  margin-top: 60px; /*pra dar espaço agora q o cabecalho ta fixed*/
+
+  background-color: #CC0000; /*#002;*/
+}
+
+.layout-exemplo {
+  padding: 80px 0;
+
+  background-color: #cdcdcd; /*#B0E0E6;*/
+  color: #000;
+  opacity: 0.8;
+}
+
+.layout-exemplo--dark-theme {
+  padding: 80px 0;
+
+  background-color: #192231; /*#020200; */
+  color: #DDD;
+}
+
+.layout-exemplo--dark-theme a {
+  color: #67aeca;
+  text-decoration: none;
+}
+
+.layout-exemplo--dark-theme a:hover, .layout-exemplo--dark-theme a:focus {
+  color: #00BFFF;
+  text-decoration: none;
+}
+
+.layout-rodape {
+  padding: 25px 0;
+
+  background-color: #484848;
+  color: #fff;
+
+  text-align: center;
+}
+
+.layout-assinatura {
+ padding: 40px 0;
+}

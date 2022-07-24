@@ -1,0 +1,122 @@
+/*CSS DOCUMENT*/
+/*Esse doc foi montado ao longodo curso, contem comentários das alterações e propriedades*/
+/*os arquivos usados na página final foram formados com partes desse*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+header { ?8altere header por layout-cabecalho seguindo o BEM*/
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+
+  background-color: #fff; /*pra qdo scrollar ele ter cor de fundo. Combina com o prox modificador*/
+}
+
+.layout-cabecalho--fixed {
+  position: fixed; /*esse e os 3 debaixo pra colar o cabecalho na pag msm qdo scrollar*/
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;  /*esse é pra se sobrepor a outros elementos*/
+}
+
+
+header img {
+  margin-top: 12px; /*para cenralizar a img verticalmente: (60 - 34.33)/2 */
+}
+
+/*o bootstrapjá tem um container padronizado, vamos usar o dele então
+.container-layout {
+  width: 100%; /*aqui jjá começamos a trabalhar com layout responsivo /*antes estava 1200px, não responsivo
+  padding-left: 15px;
+  padding-right: 15px; /*pros elementos não colarem no canto qdo diminuir a pagina
+  margin: 0 auto;
+} */
+
+
+#planos {
+  padding: 80px 0;/*o zero aqui é q a div container-layout é responsável por dar espaçamento lateral e centralização*/
+}
+
+#planos::after{
+  clear: both;
+}
+
+article {
+  /*width: 30%; antes estava com 370px, troquei p/ ficar fluido - primeiro passo para o responsivo!*/
+  padding: 10px;
+  border: 1px solid #f00;
+  border-radius: 10px;
+  /*float: left; /*tirando width, float e margin daqui e colocando no media, estamos fazendo mobile-first, ou seja, desenvolvo o normal para mobile e aplico media para desktop!
+  margin-right: 5%; /*era 30px, p/ ficar fluido trocamos*/ /*5% é p/ interar com 30% de cada article (30x3 + 5x2)*/
+}
+/* @media é uma possibilidade para responsivo, mas já q vamos usar o Bootstrap não vai precisar dele aqui (já tá incluso no bootstrap)
+@media (min-width: 800px) { /*CSS media queries - se o q está entre () for true, ele executa!*/ /*800px é o breakpoint
+  article {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+  } /*media só funciona se tiver o meta viewport no HTML, senão o browser dá zoom out
+} */
+
+article h2 {
+  text-align:center;
+  font-size: 28px;
+  font-weight: normal;
+  color: #f00;
+  text-shadow: 1px 1px #fff;/* 1px 1px 2px #000;*/
+  background-color: #aaa;
+  border: thin #aaa;
+  border-bottom: 0.5px solid #DAA520;
+  border-radius: 10px 10px 0 0;
+  line-height: 2.5; /*a cx do h2 fica com uma altura 2.5x o tamanho da fonte*/
+  margin: -10px; /*tirei a margem padrão do h2 pra ele colar com a borda*/
+  margin-bottom: 0;
+}
+
+article > div {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+article ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0; /*os 20px pra cima se sobrepõem aos 20 da div do preço, e não soma. São compartilhadas*/
+  /*text-align: center; se colocasse aqui ao inves do art ul li tb da certo*/
+}
+
+article ul li {
+  text-align: center;
+}
+
+/*article strong {
+  text-shadow: 0.4px 0.4px 2px #DAA520;
+}*/
+
+article footer {
+  text-align: center;
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  background-color: #127D00;
+  border: thin #127D00;
+  border-radius: 5px;
+  box-shadow: 2px 2px #bbb;
+}
+
+.botao:hover, .botao:focus {
+  background-color: #0e6500;
+}
